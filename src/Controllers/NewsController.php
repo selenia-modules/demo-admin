@@ -7,6 +7,8 @@ use Selenia\Platform\Components\Base\PageComponent;
 class NewsController extends PageComponent
 {
   public $template = <<<'HTML'
+<Import service="navigation"/>
+
 <GridPage>
 
   <DataGrid data={news} as="i:r" onClickGoTo={navigation.article + r.id}>
