@@ -1,8 +1,6 @@
 <?php
 namespace SeleniaModules\DemoAdmin\Config;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
 use Electro\Application;
 use Electro\Core\Assembly\Services\ModuleServices;
 use Electro\Interfaces\Http\RequestHandlerInterface;
@@ -10,8 +8,12 @@ use Electro\Interfaces\Http\RouterInterface;
 use Electro\Interfaces\ModuleInterface;
 use Electro\Interfaces\Navigation\NavigationInterface;
 use Electro\Interfaces\Navigation\NavigationProviderInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use SeleniaModules\DemoAdmin\Controllers\AboutController;
+use SeleniaModules\DemoAdmin\Controllers\Forms\ArticleController;
 use SeleniaModules\DemoAdmin\Controllers\HomepageController;
+use SeleniaModules\DemoAdmin\Controllers\NewsController;
 
 class DemoAdminModule implements
   ModuleInterface
@@ -38,9 +40,10 @@ class DemoAdminModule implements
     return $this->router
       ->set ([
         'admin...' => [
-          'home'  => HomepageController::class,
-          'about' => AboutController::class
-          //          'news'
+          'home'     => HomepageController::class,
+          'about'    => AboutController::class,
+          'news'     => NewsController::class,
+          'news/@id' => ArticleController::class,
           //          'products'
           //          'contacts'
           //          'config'
@@ -93,7 +96,13 @@ class DemoAdminModule implements
                 ->title ('About Us'),
               'news'     => $navigation
                 ->link ()
-                ->title ('News'),
+                ->title ('News')
+                ->links ([
+                  '@id' => $navigation
+                    ->link ()
+                    ->id ('article')
+                    ->title ('Article'),
+                ]),
               'products' => $navigation
                 ->link ()
                 ->title ('Products'),

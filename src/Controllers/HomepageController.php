@@ -16,7 +16,7 @@ class HomepageController extends PageComponent
       <FormLayout>
       
         <Field name=title label=Ninja>
-          <Input type=/>
+          <Input/>
         </Field>
         
       </FormLayout>
