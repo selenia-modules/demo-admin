@@ -1,0 +1,36 @@
+<FormPage>
+
+  <FormLayout>
+
+    <Field label="Title" model=title/>
+    <Field label="Lead" model=lead type=multiline/>
+    <Field label="Text" model=text type=multiline/>
+
+  </FormLayout>
+
+  <FormLayout>
+
+    <Column1>
+      <Apply where="Field">
+        <Set labelClass="control-label col-xs-4" groupClass="col-xs-8"/>
+        <Field label="Published" type=switch/>
+        <Field label="Image" model=image type=switch>
+          <ImageField/>
+        </Field>
+      </Apply>
+    </Column1>
+
+    <Column2>
+      <Field label="Source" model=source/>
+      <Field label="Article date" model=date type=date/>
+      <Field label="Created on" model=creation_date>
+        <Input type=datetime readOnly/>
+      </Field>
+    </Column2>
+
+  </FormLayout>
+  <Actions>
+    <ButtonsSaveDelete/>
+  </Actions>
+
+</FormPage>

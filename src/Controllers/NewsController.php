@@ -3,6 +3,7 @@ namespace SeleniaModules\DemoAdmin\Controllers;
 
 use Electro\ViewEngine\Lib\ViewModel;
 use Selenia\Platform\Components\Base\PageComponent;
+use SeleniaModules\DemoAdmin\Models\Article;
 
 class NewsController extends PageComponent
 {
@@ -25,7 +26,7 @@ class NewsController extends PageComponent
       {r.date}
     </Column>
     <Column width="145" title="Creation date">
-      {r.creationDate}
+      {r.creation_date}
     </Column>
 
     <Actions>
@@ -39,11 +40,7 @@ HTML;
 
   protected function viewModel (ViewModel $viewModel)
   {
-    $viewModel->news = [
-      ['id' => 1, 'title' => 'Economy crashes', 'published' => true],
-      ['id' => 2, 'title' => 'Trump wins the election'],
-      ['id' => 3, 'title' => 'Hilary goes home'],
-    ];
+    $viewModel->news = Article::all();
   }
 
 }

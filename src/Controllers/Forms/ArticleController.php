@@ -1,16 +1,16 @@
 <?php
 namespace SeleniaModules\DemoAdmin\Controllers\Forms;
 
-use Selenia\Platform\Components\Base\PageComponent;
+use Selenia\Platform\Components\AdminPageComponent;
+use SeleniaModules\DemoAdmin\Models\Article;
 
-class ArticleController extends PageComponent
+class ArticleController extends AdminPageComponent
 {
-  public $template = <<<'HTML'
-<FormPage>
+  public $templateUrl = 'admin/forms/article.html';
 
- hello
-
-</FormPage>
-HTML;
+  protected function model ()
+  {
+    $this->modelController->withRequestedId ()->loadModel (Article::class);
+  }
 
 }
