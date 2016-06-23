@@ -29,12 +29,15 @@ class NewsController extends PageComponent
       {r.creation_date}
     </Column>
 
-    <Actions>
-      <ButtonDelete/>
-      <ButtonNew url={navigation.article}/>
-    </Actions>
+    <NoData>
+      <div class="alert alert-danger">There are no records yet.</div>
+    </NoData>
   </DataGrid>
 
+  <Actions>
+    <ButtonNew url={navigation.article}/>
+  </Actions>
+    
 </GridPage>
 HTML;
 
