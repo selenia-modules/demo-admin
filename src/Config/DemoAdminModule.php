@@ -76,45 +76,39 @@ class DemoAdminModule implements
    *
    * Either way, you should also remove this comment block when it's no longer needed.
    */
-  function defineNavigation (NavigationInterface $navigation)
+  function defineNavigation (NavigationInterface $nav)
   {
-    $navigation->add ([
-      $navigation
+    $nav->add ([
+      'admin' => $nav
         ->group ()
-        ->id ('mainMenu')
-        ->visible (false)
+        ->title ('Contents')
         ->links ([
-          'admin' => $navigation
-            ->group ()
-            ->title ('Contents')
+          'home'     => $nav
+            ->link ()
+            ->title ('Homepage'),
+          'about'    => $nav
+            ->link ()
+            ->title ('About Us'),
+          'news'     => $nav
+            ->link ()
+            ->title ('News')
             ->links ([
-              'home'     => $navigation
+              '@id' => $nav
                 ->link ()
-                ->title ('Homepage'),
-              'about'    => $navigation
-                ->link ()
-                ->title ('About Us'),
-              'news'     => $navigation
-                ->link ()
-                ->title ('News')
-                ->links ([
-                  '@id' => $navigation
-                    ->link ()
-                    ->id ('article')
-                    ->title ('Article'),
-                ]),
-              'products' => $navigation
-                ->link ()
-                ->title ('Products'),
-              'contacts' => $navigation
-                ->link ()
-                ->title ('Contacts'),
-              'config'   => $navigation
-                ->link ()
-                ->title ('Config'),
+                ->id ('article')
+                ->title ('Article'),
             ]),
+          'products' => $nav
+            ->link ()
+            ->title ('Products'),
+          'contacts' => $nav
+            ->link ()
+            ->title ('Contacts'),
+          'config'   => $nav
+            ->link ()
+            ->title ('Config'),
         ]),
-    ], true, 'app_home');
+    ], false, 'mainMenu');
   }
 
 }

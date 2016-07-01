@@ -27,6 +27,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "selenia/platform": "dev-master"
+    "selenia/platform": "dev-master",
+    "selenia-modules/theme-gentelella": "dev-master"
   }
 }
