@@ -7,21 +7,16 @@ class HomepageController extends PageComponent
 {
   public $template = <<<HTML
   
-    <FormPage>
-      <Actions>
-        <ButtonsSaveDelete/>
-        <Button label="Preview"/>
-      </Actions>
-      
-      <FormLayout>
-      
-        <Field name=title label=Ninja>
-          <Input/>
-        </Field>
-        
-      </FormLayout>
-      
-    </FormPage>
+<AppPage>
+  <FormPanel>
+    <FormLayout>
+      <Field label="Nome" bind=model.nome required/>
+    </FormLayout>
+    <Actions>
+      <StandardFormActions key="{model.id}"/>
+    </Actions>
+  </FormPanel>
+</AppPage>
 
 HTML;
 

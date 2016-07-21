@@ -1,11 +1,10 @@
 <?php
 namespace SeleniaModules\DemoAdmin\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Electro\Plugins\IlluminateDatabase\BaseModel;
 
-class Article extends Model
+class Article extends BaseModel
 {
-  public $timestamps = false;
 
 //  protected $dates = ['date', 'creation_date'];
 }

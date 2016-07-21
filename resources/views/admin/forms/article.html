@@ -1,40 +1,41 @@
-<FormPage>
+<AppPage>
+  <FormPanel>
+    <FormLayout>
 
-  <FormLayout>
+      <Field label="Title" bind=model.title type=text autofocus required/>
+      <Field label="Lead" bind=model.lead type=multiline/>
+      <Field label="Text" bind=model.text type=multiline/>
 
-    <Field label="Title" model=title>
-      <Input required/>
-    </Field>
-    <Field label="Lead" model=lead type=multiline/>
-    <Field label="Text" model=text type=multiline/>
+    </FormLayout>
 
-  </FormLayout>
+    <FormLayout>
 
-  <FormLayout>
+      <Column1>
+        <Presets>
+          <Where match="Field">
+            <Set labelClass="control-label col-xs-4" groupClass="col-xs-8"/>
+          </Where>
 
-    <Column1>
-      <Apply where="Field">
-        <Set labelClass="control-label col-xs-4" groupClass="col-xs-8"/>
-        <Field label="Published" type=switch model=published/>
-        <Field label="Image" model=image type=switch>
-          <ImageField/>
+          <Field label="Published" type=switch bind=model.published/>
+          <Field label="Image" bind=model.image type=switch>
+            <ImageField/>
+          </Field>
+        </Presets>
+      </Column1>
+
+      <Column2>
+        <Field label="Source" bind=model.source/>
+        <Field label="Article date" bind=model.date type=date required/>
+        <Field label="Created on" bind=model.creation_date type=datetime>
+          <Input readOnly/>
         </Field>
-      </Apply>
-    </Column1>
+      </Column2>
 
-    <Column2>
-      <Field label="Source" model=source/>
-      <Field label="Article date" model=date>
-        <Input type=date required/>
-      </Field>
-      <Field label="Created on" model=creation_date>
-        <Input type=datetime readOnly/>
-      </Field>
-    </Column2>
+    </FormLayout>
 
-  </FormLayout>
-  <Actions>
-    <ButtonsSaveDelete key="{model.id}"/>
-  </Actions>
+    <Actions>
+      <StandardFormActions key="{model.id}"/>
+    </Actions>
+  </FormPanel>
 
-</FormPage>
+</AppPage>
