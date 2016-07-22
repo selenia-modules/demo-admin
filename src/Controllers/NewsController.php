@@ -26,14 +26,14 @@ class NewsController extends PageComponent
       <Column width="145" title="Creation date">
         {r.creation_date}
       </Column>
+    
+      <Actions>
+        <ButtonNew/>
+        <ButtonPrint/>
+        <ButtonDelete/>
+        <Button icon="ion-funnel" class="btn-link ActionFilter" script="$('.multiSearch').toggle()"/>
+      </Actions>
     </DataGrid>
-  
-    <Actions>
-      <ButtonNew/>
-      <ButtonPrint/>
-      <ButtonDelete/>
-      <Button icon="ion-funnel" class="btn-link ActionFilter" script="$('.multiSearch').toggle()"/>
-    </Actions>
   </GridPanel>
     
 </AppPage>
