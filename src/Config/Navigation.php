@@ -28,15 +28,15 @@ class Navigation implements NavigationProviderInterface
                 ->id ('article')
                 ->title ('Article'),
             ]),
-          'products' => $nav
-            ->link ()
-            ->title ('Products'),
-          'contacts' => $nav
-            ->link ()
-            ->title ('Contacts'),
-          'config'   => $nav
-            ->link ()
-            ->title ('Config'),
+//          'products' => $nav
+//            ->link ()
+//            ->title ('Products'),
+//          'contacts' => $nav
+//            ->link ()
+//            ->title ('Contacts'),
+//          'config'   => $nav
+//            ->link ()
+//            ->title ('Config'),
         ]),
     ], false, 'mainMenu');
   }
