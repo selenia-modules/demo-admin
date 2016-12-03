@@ -1,5 +1,5 @@
 {
-  "name": "selenia-modules/demo-admin",
+  "name": "selenia/demo-admin-template",
   "description": "Administration app for the demonstration website, made with Selenia",
   "type": "electro-template",
   "keywords": [
@@ -27,7 +27,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "selenia/platform": "dev-master",
-    "selenia-modules/theme-gentelella": "dev-master"
+    "selenia/platform": "^0.9.0",
+    "selenia-modules/theme-gentelella": "^0.9.0"
   }
 }
