@@ -1,5 +1,5 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Controllers;
+namespace SeleniaTemplates\DemoAdmin\Controllers;
 
 use Selenia\Platform\Components\Base\PageComponent;
 

@@ -1,5 +1,5 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Models;
+namespace SeleniaTemplates\DemoAdmin\Models;
 
 use Electro\Plugins\IlluminateDatabase\BaseModel;
 use Electro\Plugins\MatisseComponents\Traits\FilesModelTrait;

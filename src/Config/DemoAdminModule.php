@@ -1,5 +1,5 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Config;
+namespace SeleniaTemplates\DemoAdmin\Config;
 
 use Electro\Interfaces\Http\Shared\ApplicationRouterInterface;
 use Electro\Interfaces\KernelInterface;

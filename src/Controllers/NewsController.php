@@ -1,9 +1,9 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Controllers;
+namespace SeleniaTemplates\DemoAdmin\Controllers;
 
 use Electro\ViewEngine\Lib\ViewModel;
 use Selenia\Platform\Components\Base\PageComponent;
-use SeleniaModules\DemoAdmin\Models\Article;
+use SeleniaTemplates\DemoAdmin\Models\Article;
 
 class NewsController extends PageComponent
 {

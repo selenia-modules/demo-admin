@@ -1,14 +1,14 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Config;
+namespace SeleniaTemplates\DemoAdmin\Config;
 
 use Electro\Interfaces\Http\RequestHandlerInterface;
 use Electro\Interfaces\Http\RouterInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use SeleniaModules\DemoAdmin\Controllers\AboutController;
-use SeleniaModules\DemoAdmin\Controllers\Forms\ArticleController;
-use SeleniaModules\DemoAdmin\Controllers\HomepageController;
-use SeleniaModules\DemoAdmin\Controllers\NewsController;
+use SeleniaTemplates\DemoAdmin\Controllers\AboutController;
+use SeleniaTemplates\DemoAdmin\Controllers\Forms\ArticleController;
+use SeleniaTemplates\DemoAdmin\Controllers\HomepageController;
+use SeleniaTemplates\DemoAdmin\Controllers\NewsController;
 
 class Routes implements RequestHandlerInterface
 {

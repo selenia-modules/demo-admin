@@ -19,15 +19,15 @@
       "email": "claudio.silva@impactwave.com"
     }
   ],
-  "homepage": "https://github.com/selenia-modules/demo-admin",
+  "homepage": "https://github.com/selenia-platform/demo-admin",
   "autoload": {
     "psr-4": {
-      "SeleniaModules\\DemoAdmin\\": "src"
+      "SeleniaTemplates\\DemoAdmin\\": "src"
     }
   },
   "require": {
     "php": ">=5.6",
     "selenia/platform": "^0.9.0",
-    "selenia-modules/theme-gentelella": "^0.9.0"
+    "selenia/theme-gentelella": "^0.9.0"
   }
 }

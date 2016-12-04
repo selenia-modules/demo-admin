@@ -1,5 +1,5 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Config;
+namespace SeleniaTemplates\DemoAdmin\Config;
 
 use Electro\Interfaces\Navigation\NavigationInterface;
 use Electro\Interfaces\Navigation\NavigationProviderInterface;

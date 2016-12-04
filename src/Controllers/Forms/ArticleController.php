@@ -1,8 +1,8 @@
 <?php
-namespace SeleniaModules\DemoAdmin\Controllers\Forms;
+namespace SeleniaTemplates\DemoAdmin\Controllers\Forms;
 
 use Selenia\Platform\Components\AdminPageComponent;
-use SeleniaModules\DemoAdmin\Models\Article;
+use SeleniaTemplates\DemoAdmin\Models\Article;
 
 class ArticleController extends AdminPageComponent
 {
